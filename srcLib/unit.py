@@ -2,6 +2,7 @@ import network
 import time
 import sys
 sys.path.append('/srcLib')
+import utelnetserver
 
 class Unit:
     class Wifi:
@@ -68,7 +69,7 @@ class Unit:
 
     def __init__(self, ssid, password, wifiMode):
         self.wifi = Unit.Wifi(ssid, password, wifiMode)
-
+        utelnetserver.start()
 
 
     
